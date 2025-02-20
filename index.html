@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <title>Cedar Business Consultancy</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <script defer src="scripts/scripts.js"></script>    
+</head>
+<body style="background-color: white;">
+
+<div class="contacting">
+
+  <p style="padding-top: 11px; margin-left: vh;"></p>
+
+  <div class="liner"></div>
+  <style>
+    .contacting{
+      background-color: #044c9fb5; 
+      color: #cccfd6;
+      font-size: 23px;
+
+    }
+  .liner{width:100%;
+    height:7.5px; 
+    background: #476b94d8; 
+    margin-top: 11px;
+ 
+}
+</style>
+
+
+</div>
+    <nav class="navbar">
+        <img src="images/logo.png" alt="Cedar" style="width: fit-content;filter: none;">
+        <ul>
+            <li><a href="#aboutus"><i class="fas fa-info-circle" style="color:  rgb(60, 73, 92);"></i> About</a></li>
+            <li><a href="projects.html"><i class="fas fa-project-diagram" style="color:  rgb(60, 73, 92);"></i> Projects</a></li>
+            <li><a href="#faqs"><i class="fas fa-question-circle" style="color:  rgb(60, 73, 92);"></i> FAQs</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope" style="color:  rgb(60, 73, 92);"></i> Contact</a></li>
+           
+        </ul>
+        <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+    <div class="menu" id="menu">
+        <ul class="mobiles">
+           
+            <a href="#aboutus"><i class="fas fa-info-circle" style="color:  rgb(60, 73, 92);"></i> About</a></li>
+            <a href="#proj"><i class="fas fa-project-diagram" style="color:  rgb(60, 73, 92);"></i> Projects</a></li>
+            <a href="#faqs"><i class="fas fa-question-circle" style="color:  rgb(60, 73, 92);"></i> FAQs</a></li>
+            <a href="#contact"><i class="fas fa-envelope" style="color: rgb(60, 73, 92);"></i> Contact</a></li>
+    
+            
+            
+           
+        </ul>
+    </div>
+
+
+    <style>
+      /* --- Global Resets (Optional) --- */
+  
+  
+      /* --- ad-card Section --- */
+      .ad-card {
+        position: relative;
+
+        padding: 1.5rem; /* Default padding for small screens */
+      }
+  
+      /* Medium screens (min-width: 768px) */
+      @media (min-width: 768px) {
+        .ad-card {
+          padding: 5vh;
+        }
+      }
+  
+      /* Large screens (min-width: 1024px) */
+      @media (min-width: 1024px) {
+        .ad-card {
+          padding: 4vh;
+        }
+      }
+  
+      /* --- Top Box --- */
+      .top-box {
+        border:rgb(182, 205, 238) solid 3px;
+        position: relative;
+        max-width: 45vh; /* ~ Tailwind's max-w-4xl */
+        margin: 0 auto;
+        text-align: center;
+        background-color: #044c9fb5; /* Black background */
+        padding: 4vh;
+        padding-bottom:5vh; /* Extra bottom padding for overlap (pb-32 => 8rem) */
+        border-radius: 2px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.258);
+        z-index: 10;
+        margin-bottom: 4rem; /* Space before the image container starts */
+      }
+  
+      @media (min-width: 768px) {
+        .top-box {
+          padding: 7vh;
+          padding-top: 2vh;
+        }
+      }
+  
+      .top-box h3 {
+    
+       
+        text-transform: uppercase;
+        color: #000000; /* Gray-400 */
+        margin-bottom: 60vh;
+      }
+  
+      .top-box h2 {
+        font-weight: 600;
+        color: #dcdcdc;
+        margin-bottom: 2vh;
+      }
+  
+      @media (min-width: 768px) {
+        .top-box h2 {
+        font-size: 30px;
+        
+        }
+      }
+  
+      .top-box p {
+        font-size: 1rem; /* text-base */
+        color: #e5e7eb; /* Gray-200 */
+        margin-bottom: 1rem;
+      }
+  
+      .top-box button {
+        padding: 0.75rem 1.5rem;
+        background-color: #2563eb; /* Blue-600 */
+        color: #fff;
+        font-weight: 600;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.2s;
+      }
+  
+      .top-box button:hover {
+        background-color: #1e40af; /* Blue-700 */
+      }
+  
+      /* --- Image Container (Overlaps Top Box) --- */
+      .image-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-top: -6rem; /* Negative margin to overlap the top box */
+        z-index: 20;
+      }
+  
+      /* Increase overlap on larger screens if you like */
+      @media (min-width: 768px) {
+        .image-container {
+          margin-top: -8rem; /* More overlap on medium+ screens */
+        }
+      }
+  
+      .image-container img {
+        border:rgb(182, 205, 238) solid 3px;
+        width: 32vh; /* 2/3 of the container width */
+        height: 23vh;
+        border-radius: 2px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.322);
+        object-fit: cover;
+      }
+  
+      /* --- Bottom Box --- */
+      .bottom-box {
+        position: relative;
+        max-width: 45vh; /* ~ Tailwind's max-w-3xl */
+        margin: 0 auto;
+        text-align: center;
+        background-color: #000; /* Black background */
+        padding: 3vh;
+        padding-top: 5vh; /* For spacing above content */
+        border-radius: 2px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 10;
+        margin-top: -1.5rem; /* Overlap the image a bit */
+      }
+  
+      @media (min-width: 768px) {
+        .bottom-box {
+          padding: 2vh;
+          padding-top: 4vh;
+        }
+      }
+  
+      .bottom-box h4 {
+        font-size: 0.75rem; /* text-xs */
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #9ca3af; /* Gray-400 */
+        margin-bottom: 0.5rem;
+      }
+  
+      .bottom-box p {
+        font-size: 1rem;
+        color: #e5e7eb; /* Gray-200 */
+      }
+
+
+
+      button {
+        margin-top: 2vh;
+        padding: 1.9vh 1.5vh;
+        background-color: #044a99d8;  /* Blue-600 */
+        color: #fff;
+        font-weight: 600;
+        border-radius: 2px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.2s;
+      }
+    </style>
+
+
+<style>
+  .face {
+      margin: 0;
+     
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+  }
+  .box {
+      position: relative;
+      width: 100%;
+      height: 60vh;
+      background: #00499c;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  
+  .box h3 {
+      
+      color: white;
+
+      padding-bottom:30vh;
+    
+  
+      font-size: 1.90rem;
+  }
+  .content {
+    margin-left: 4vh;
+      margin-top: -260px;
+      font-size: 1.2rem;
+      padding-bottom:40px;
+  }
+</style>
+
+
+
+<main class="face">
+
+<div class="box">
+  <h3><span style="font-size: 3vh; font-family: 'Tahoma'; margin: auto;border-radius: 3px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.471);border: 3px solid  #425e7c; padding-left: 8px; background-color: rgb(142, 170, 207); color: #00499c; margin-right: 5px; padding-bottom: 2px;">Cedar </span> Business Consultancy & Corporate Training <span class="py">(PTY)LTD</span>
+  
+  
+  <br/>
+<button class="hel">About</button>
+
+
+
+<style>
+
+ .hel {
+       margin-top: 5vh;
+       margin-right: 27vh;
+        padding: 1.9vh 4vh;
+        background-color: #d4e4f5d8;  /* Blue-600 */
+        color: #1058a4e8; 
+        font-size: 2vh;
+        border-radius: 2px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        border: solid 3px #065ab4d8; 
+        cursor: pointer;
+        transition: background-color 0.2s;
+      }
+</style>
+</h3>
+
+</div>
+
+
+<div class="content">   
+
+
+
+<style>
+  .py{
+    font-size: 18px;
+    font-family: 'Courier New';
+    color: #c8ccda;
+  }
+</style>
+
+
+
+
+<style>
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  width: 600px;
+  margin: auto;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.471);
+  border: 3px solid  #6582a2;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  height: 300px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  height: 14px;
+  width: 14px;
+  border: 2px solid rgb(174, 192, 228);
+  background-color:#7a88b6;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #000000;
+}
+
+@media (max-width: 768px) {
+  .slideshow-container {
+      width: 90%;
+  }
+  .slide {
+      height: 290px;
+  }
+}
+</style>
+
+
+<div>
+
+<div class="slideshow-container" onmouseover="pauseSlideshow()" onmouseleave="resumeSlideshow()">
+  <div class="slide fade">
+      <img src="images/img1.jpg" alt="1">
+  </div>
+  <div class="slide fade">
+      <img src="images/img2.jpg" alt="2">
+  </div>
+  <div class="slide fade">
+      <img src="images/img3.jpg" alt="3">
+  </div>
+  <div class="slide fade">
+      <img src="images/img4.jpg" alt="4">
+  </div>
+  <div class="slide fade">
+      <img src="images/img5.jpg" alt="5">
+  </div>
+  <div class="indicators">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+  </div>
+</div>
+</div>
+
+</div>
+<script>
+let slideIndex = 0;
+let slideInterval;
+showSlides();
+
+function showSlides() {
+  let slides = document.querySelectorAll(".slide");
+  let dots = document.querySelectorAll(".dot");
+  for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex - 1].style.display = "block";
+  dots.forEach(dot => dot.classList.remove("active"));
+  dots[slideIndex - 1].classList.add("active");
+  slideInterval = setTimeout(showSlides, 3000);
+}
+
+function currentSlide(n) {
+  clearTimeout(slideInterval);
+  slideIndex = n - 1;
+  showSlides();
+}
+
+function pauseSlideshow() {
+  clearTimeout(slideInterval);
+}
+
+function resumeSlideshow() {
+  slideInterval = setTimeout(showSlides, 3000);
+}
+</script>
+
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="carding">
+  
+    <!-- Ad Card Section -->
+    <section class="ad-card">
+      <!-- Top Box -->
+      <div class="top-box">
+     
+        <h2>Navigating Markets with Confidence</h2>
+
+      </div>
+  
+      <!-- Image (Overlaps the Top Box) -->
+      <div class="image-container">
+        <img
+          src="images/cert2.jpg"
+          alt="Tiger in the wild"
+        >
+      </div>
+  
+      <!-- Bottom Box -->
+      <div class="bottom-box">
+        <h4>Our Mission</h4>
+        <p>
+          For over 90 years, we have been dedicated to helping individuals and businesses
+          reach their financial potential with trusted investment strategies.
+        </p>
+        <button>Explore the Report</button>
+
+      </div>
+    </section>
+    <!-- End of Ad Card Section -->
+    <section class="ad-card">
+      <!-- Top Box -->
+      <div class="top-box">
+     
+        <h2>Navigating Markets with Confidence</h2>
+
+      </div>
+  
+      <!-- Image (Overlaps the Top Box) -->
+      <div class="image-container">
+        <img
+          src="images/cert.jpg"
+          alt="Tiger in the wild"
+        >
+      </div>
+  
+      <!-- Bottom Box -->
+      <div class="bottom-box">
+        <h4>Our Mission</h4>
+        <p>
+          For over 90 years, we have been dedicated to helping individuals and businesses
+          reach their financial potential with trusted investment strategies.
+        </p>
+        <button>Explore the Report</button>
+
+      </div>
+    </section>
+
+      <!-- Ad Card Section -->
+      <section class="ad-card">
+        <!-- Top Box -->
+        <div class="top-box">
+       
+          <h2>Navigating Markets with Confidence</h2>
+  
+        </div>
+    
+        <!-- Image (Overlaps the Top Box) -->
+        <div class="image-container">
+          <img
+            src="images/cert2.jpg"
+            alt="Tiger in the wild"
+          >
+        </div>
+
+        <!-- Bottom Box -->
+        <div class="bottom-box">
+          <h4>Our Mission</h4>
+          <p>
+            For over 90 years, we have been dedicated to helping individuals and businesses
+            reach their financial potential with trusted investment strategies.
+          </p>
+          <button>Explore the Report</button>
+  
+        </div>
+      </section>
+      <!-- End of Ad Card Section -->
+<br>
+<section class="ad-card">
+        <!-- Top Box -->
+        <div class="top-box">
+       
+          <h2>Navigating Markets with Confidence</h2>
+  
+        </div>
+    
+        <!-- Image (Overlaps the Top Box) -->
+        <div class="image-container">
+          <img
+            src="images/cert.jpg"
+            alt="Tiger in the wild"
+          >
+        </div>
+    
+        <!-- Bottom Box -->
+        <div class="bottom-box">
+          <h4>Our Mission</h4>
+          <p>
+            For over 90 years, we have been dedicated to helping individuals and businesses
+            reach their financial potential with trusted investment strategies.
+          </p>
+          <button>Explore the Report</button>
+  
+        </div>
+</section>
+
+<section class="ad-card">
+  <!-- Top Box -->
+  <div class="top-box">
+ 
+    <h2>Navigating Markets with Confidence</h2>
+
+  </div>
+
+  <!-- Image (Overlaps the Top Box) -->
+  <div class="image-container">
+    <img
+      src="images/cert.jpg"
+      alt="Tiger in the wild"
+    >
+  </div>
+
+  <!-- Bottom Box -->
+  <div class="bottom-box">
+    <h4>Our Mission</h4>
+    <p>
+      For over 90 years, we have been dedicated to helping individuals and businesses
+      reach their financial potential with trusted investment strategies.
+    </p>
+    <button>Explore the Report</button>
+
+  </div>
+</section>
+
+
+</section>
+    </div>
+
+
+
+
+    
+  
+    <style>
+      main {
+          font-family: Arial, sans-serif;
+          background-color: #f4f4f4;
+          margin: 0;
+          padding: 2px;
+      }
+
+      .sec{
+       
+          padding: 17px;
+          margin: 10px auto;
+          width: 95%;
+          max-width: 600px;
+         
+          position: relative;
+      }
+
+      .divider {
+          width: 10px;
+          height: 70px;
+          background: #0915bd; /* Dark Red */
+          position: absolute;
+          left: 0;
+          top: 10px;
+      }
+
+      h4{
+          margin: 0;
+          font-size: 24px;
+          font-weight: normal;
+      }
+
+     h5 span {
+          font-weight: bold;
+      }
+
+      .pass {
+          margin-top: 10px;
+          font-size: 16px;
+          color: #333;
+      }
+  </style>
+
+<main>
+
+  <div class="sec">
+      <div class="divider"></div>
+      <h4>OUR <span>DIVISIONS</span></h4>
+      <h5>Our specialist divisions work closely together with our project team, to provide you with a full service.
+        Our specialist divisions work closely together with our project team, to provide you with a full service of worth.
+        Our specialist divisions work closely together with our project team, to provide you with a full service defined.
+      </h5>
+  </div>
+
+  <div class="sec">
+      <div class="divider"></div>
+      <h4>OUR <span>PROJECTS</span></h4>
+      <h5>Our specialist divisions work closely together with our project team, to provide you with a full service.
+        Our specialist divisions work closely together with our project team, to provide you with a full service of worth.
+        Our specialist divisions work closely together with our project team, to provide you with a full service defined.
+      </h5>
+  </div>
+
+  <div class="sec">
+      <div class="divider"></div>
+      <h4>OUR <span>TEAM</span></h4>
+      <h5>Our specialist divisions work closely together with our project team, to provide you with a full service.
+        Our specialist divisions work closely together with our project team, to provide you with a full service of worth.
+        Our specialist divisions work closely together with our project team, to provide you with a full service defined.
+      </h5>
+  </div>
+
+  <div class="sec">
+    <div class="divider"></div>
+    <h4>OUR <span>TEAM</span></h4>
+    <h5>Our specialist divisions work closely together with our project team, to provide you with a full service.
+      Our specialist divisions work closely together with our project team, to provide you with a full service of worth.
+      Our specialist divisions work closely together with our project team, to provide you with a full service defined.
+    </h5>
+</div>
+
+
+</main>
+</body>
+
+
+</html>
