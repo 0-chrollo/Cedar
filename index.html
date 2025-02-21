@@ -36,9 +36,9 @@
     <nav class="navbar">
         <img src="images/logo.png" alt="Cedar" style="width: fit-content;filter: none;">
         <ul>
-            <li><a href="#aboutus"><i class="fas fa-info-circle" style="color:  rgb(60, 73, 92);"></i> About</a></li>
-            <li><a href="projects.html"><i class="fas fa-project-diagram" style="color:  rgb(60, 73, 92);"></i> Projects</a></li>
-            <li><a href="#faqs"><i class="fas fa-question-circle" style="color:  rgb(60, 73, 92);"></i> FAQs</a></li>
+            <li><a href="#aboutus"><i class="fas fa-info-circle" style="color:  rgb(60, 73, 92);"></i>About</a></li>
+            <li><a href="projects.html"><i class="fas fa-project-diagram" style="color:  rgb(60, 73, 92);"></i>Gallery</a></li>
+            <li><a href="#faqs"><i class="fas fa-question-circle" style="color:  rgb(60, 73, 92);"></i>Courses</a></li>
             <li><a href="#contact"><i class="fas fa-envelope" style="color:  rgb(60, 73, 92);"></i> Contact</a></li>
            
         </ul>
@@ -52,8 +52,8 @@
         <ul class="mobiles">
            
             <a href="#aboutus"><i class="fas fa-info-circle" style="color:  rgb(60, 73, 92);"></i> About</a></li>
-            <a href="#proj"><i class="fas fa-project-diagram" style="color:  rgb(60, 73, 92);"></i> Projects</a></li>
-            <a href="#faqs"><i class="fas fa-question-circle" style="color:  rgb(60, 73, 92);"></i> FAQs</a></li>
+            <a href="#proj"><i class="fas fa-project-diagram" style="color:  rgb(60, 73, 92);"></i> Gallery</a></li>
+            <a href="#faqs"><i class="fas fa-question-circle" style="color:  rgb(60, 73, 92);"></i> Courses</a></li>
             <a href="#contact"><i class="fas fa-envelope" style="color: rgb(60, 73, 92);"></i> Contact</a></li>
     
             
@@ -497,7 +497,7 @@ function resumeSlideshow() {
 <div class="container">
     <div class="column">
         <div class="icon"><i class="far fa-building"></i></div>
-        <div class="text" style="font-family:Cambria; font-size: 2.5vh;">
+        <div class="text" style="font-family:Cambria; font-size: 2.1vh;">
           <p>We are a training institution whose main focus is to improve efficiency and effectiveness for all individuals and businesses. Our accredited programs offer professional certifications and licenses in forklift operation, reach trucks, cranes, and various other heavy machinery. With a commitment to quality training, we equip our learners with the skills and knowledge needed to operate safely and confidently in the workplace. Join us to advance your career with industry-recognized qualifications.
          </p>
 
@@ -518,7 +518,7 @@ function resumeSlideshow() {
     background:#1058a4b5; 
     margin-top:7px;
 }
-.liners{width:10em;
+.liners{width:9em;
     height:7px; 
     background:#1058a4d0; 
     margin-top:7px;
@@ -547,16 +547,16 @@ function resumeSlideshow() {
   .design2 {
       font-family: Arial, sans-serif;
       background-color: rgba(145, 161, 191, 0.588); 
-      margin: 0;
-      padding: 30px;
+     
+      padding: 1%;
       display: flex;
       justify-content: center;
   }
   .containerr{
       display: grid;
-      gap: 25px;
+      gap: 20px;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      max-width: 1000px;
+      max-width: 80%;
       width: 100%;
   }
   .boxer {
@@ -774,11 +774,10 @@ function resumeSlideshow() {
     
   
     <style>
-      main {
-          font-family: Arial, sans-serif;
-          background-color: #f4f4f4;
-          margin: 0;
-          padding: 2px;
+
+
+      .mainer {
+       
       }
 
       .sec{
@@ -787,26 +786,30 @@ function resumeSlideshow() {
           margin: 10px auto;
           width: 95%;
           max-width: 600px;
-         
+           z-index: 1;
           position: relative;
       }
 
       .divider {
           width: 10px;
           height: 70px;
-          background: #0915bd; /* Dark Red */
+          background:#bdd4ed;  /* Dark Red */
           position: absolute;
           left: 0;
           top: 10px;
+          z-index:-1;
       }
 
       h4{
+        color: #b1d1f3ee; 
           margin: 0;
           font-size: 24px;
           font-weight: normal;
       }
 
-     h5 span {
+     h5 {
+      padding: 13px;
+      color: rgba(199, 222, 248, 0.79); 
           font-weight: bold;
       }
 
@@ -816,8 +819,37 @@ function resumeSlideshow() {
           color: #333;
       }
   </style>
+<div class="crazy">
 
-<main>
+<style>
+.crazy {
+  position: relative; /* Needed for my overlay */
+  background-image: url(images/cert.jpg) ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  font-family: 'Times New Roman';
+  
+  margin: 0;
+  background-attachment: fixed;
+
+  overflow: hidden; 
+}
+
+
+.crazy::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.719); 
+  z-index: 1; 
+}
+
+</style>
+<main class="mainer">
 
   <div class="sec">
       <div class="divider"></div>
@@ -857,7 +889,14 @@ function resumeSlideshow() {
 
 
 </main>
+</div>
+</div>
+<div class="courses">
+ </div>
+ 
+
+
+
+
 </body>
-
-
 </html>
