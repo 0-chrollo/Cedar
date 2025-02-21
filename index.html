@@ -1114,24 +1114,97 @@ function resumeSlideshow() {
     </div>
   </div>
 
+</div>
 
 
 
-<footer>
-
-  <h6>Hey evryone, Hope you good</h6>
-
-   <h6>Hey evryone, Hope you good</h6>
-
-
-    <h6>Hey evryone, Hope you good</h6>
-     <h6>Hey evryone, Hope you good</h6>
-
-
-     <h6>Hey evryone, Hope you good</h6>
-</footer>
-
-
+<style>
+  footer {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #00499c;
+    color: #fff;
+    padding: 10px 0;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin: 0 10px;
+    padding: 5px;
+  }
+  
+  .lined {
+    font-size: 19px;
+    margin-bottom: 15px;
+    position: relative;
+  }
+  
+  .lined::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background-color: #92b8ea;
+    width: 60%;
+    margin-top: 8px;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section a:hover {
+    color: #00bcd4;
+  }
+  </style>
+  
+  <footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4 class="lined">Links</h4>
+            <ul>
+                <li><a href="fabrication.html">Metal Fabrication</a></li>
+                <li><a href="query.html">Get a Quote</a></li>
+                <li><a href="learn.html">Learn More</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4 class="lined">Contact</h4>
+            <ul>
+                <li>Email</li>
+                <li>Call</li>
+                <li>Whatsapp</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4 class="lined">Courses</h4>
+            <ul>
+              <li><a href="fabrication.html">Metal Fabrication</a></li>
+              <li><a href="milling.html">Milling</a></li>
+              <li><a href="custom.html">Custom Fabrication</a></li>
+              <li><a href="cutting.html">Cutting</a></li>
+            </ul>
+        </div>
+    </div>
+    <p align="center" style="font-size:10px; padding: 10px;"> &copy; 2025 Cedar Business Consultancy. All Rights Reserved. Powered by <a href="#" style="color: #d0cdcd; font-size: 11px;">Lucas</a></p>
+  </footer>
 
 
 </body>
