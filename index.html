@@ -1271,5 +1271,241 @@ function resumeSlideshow() {
   </footer>
 
 
+
+
+
+
+
+
+
+
+
+
+
+  <style>
+    .widg {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #111;
+        color: white;
+    }
+    .faq-widget {
+        position: fixed;
+        bottom: 35px;
+        left: 15px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+    .faq-widget div {
+        background: #6291c6;
+        color: white;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 10px;
+        display: inline-block;
+        position: relative;
+    }
+    .faq-widget div::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 20px;
+        border-width: 20px;
+        border-style: solid;
+        border-color: #6291c6 transparent transparent transparent;
+    }
+    .faq-popup {
+        position:fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s;
+        z-index: 1000;
+    }
+    .faq-popup.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    .popup-card {
+        background: #bdcddf;
+        color: #0d2d51;
+        padding: 50px;
+        border-radius: 3px;
+        width: 380px;
+        max-height: 430px;
+        overflow-y: auto;
+        text-align: left;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        transform: scale(0.8);
+        transition: transform 0.3s ease-in-out;
+        position: relative;
+    }
+    .faq-popup.active .popup-card {
+        transform: scale(1);
+    }
+    .close-btn {
+        background: none;
+        color: #00499c;
+        border: none;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        position: absolute;
+        top: 40px;
+        left: 10px;
+        
+    }
+    .faq-content {
+        
+    }
+    @media (max-width: 768px) {
+        .popup-card {
+            width: 80%;
+            max-height: 70vh;
+            font-size: 14px;
+        }
+    }
+    @media (max-width: 480px) {
+        .popup-card {
+            width: 95%;
+            max-height: 60vh;
+            font-size: 12px;
+        }
+    }
+</style>
+
+<div class="widg">
+<div class="faq-widget" onclick="openFAQ()">
+    <div>FAQs  <i class="fa fa-info-circle"></i></div>
+</div>
+
+<div class="faq-popup" id="faqPopup">
+    <div class="popup-card">
+        <button class="close-btn" onclick="closeFAQ()">&times;</button> </br>
+        
+          <style>
+         
+            .faqss-card {
+                
+                
+                
+              
+             
+                padding: 5px;
+                
+            }
+            .faqss-item {
+                background: #d4e0ee;
+                border-radius: 3px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                margin-bottom: 10px;
+                overflow: hidden;
+                transition: all 0.3s ease;
+            }
+            .faqt-question {
+                font-size: 14px;
+                font-weight: 600;
+                padding: 12px;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                transition: background 0.3s;
+            }
+            .faqt-question:hover {
+                background: rgb(208, 224, 242);
+            }
+            .faqt-answer {
+              color: #0d2d51;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+                padding: 0 12px;
+            }
+            .faqss-item.active .faqt-answer {
+                max-height: 100px;
+                padding-bottom: 10px;
+            }
+            .arrow {
+                transition: transform 0.3s;
+                font-size: 18px;
+            }
+            .faqss-item.active .arrow {
+                transform: rotate(180deg);
+            }
+        </style>
+ 
+
+        <div class="faqss-card">
+            <h3>Frequently Asked Questions <i class="fa fa-info-circle"></i></h3> </br>
+            <div class="faqss-item">
+                <div class="faqt-question">Are Cedar Business courses accredited?<span class="arrow">&#9660;</span></div>
+                <div class="faqt-answer"> Yes, all our courses are SETA accredited, ensuring industry-recognized certification.</div>
+            </div>
+            <div class="faqss-item">
+                <div class="faqt-question">What are your operating hours?<span class="arrow">&#9660;</span></div>
+                <div class="faqt-answer">We are open from 8 AM to 4 PM, Monday to Friday. We are closed on weekends.</div>
+            </div>
+            <div class="faqss-item">
+                <div class="faqt-question">Do you offer special discounts or promotions?<span class="arrow">&#9660;</span></div>
+                <div class="faqt-answer">Yes, we frequently have special offers. Please visit our Facebook page to check for any current promotions.</div>
+            </div>
+            <div class="faqss-item">
+                <div class="faqt-question">What types of courses do you offer?<span class="arrow">&#9660;</span></div>
+                <div class="faqt-answer">We offer a variety of courses, including machinery-based training as well as cashier and petrol attendant courses.</div>
+            </div>
+            <div class="faqss-item">
+                <div class="faqt-question">Do you assist with CV revamping?<span class="arrow">&#9660;</span></div>
+                <div class="faqt-answer">Yes, we offer CV revamping services to update your resume to match the course you have completed with us.</div>
+            </div>
+        </div>
+    
+        <script>
+            document.querySelectorAll('.faqt-question').forEach(item => {
+                item.addEventListener('click', () => {
+                    const parent = item.parentElement;
+                    parent.classList.toggle('active');
+                });
+            });
+        </script>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    function openFAQ() {
+        document.getElementById('faqPopup').classList.add('active');
+    }
+    function closeFAQ() {
+        document.getElementById('faqPopup').classList.remove('active');
+    }
+</script>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 </body>
 </html>
