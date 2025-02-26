@@ -25,7 +25,7 @@
 
 
 
-<body style="background-color: white;">
+<body style="background-color: #d6dde6f0;">
 
 <div class="contacting">
 
@@ -53,8 +53,8 @@
         <img src="images/logo.png" alt="Cedar" style="width: fit-content;filter: none;">
         <ul>
             
-            <li><a href="projects.html"><i class="fas fa-file-image" style="color:  #a7b8cbd1;"></i> Gallery</a></li>
-            <li><a href="#faqs"><i class="fas fa-graduation-cap" style="color:  #a7b8cbd1;"></i> Courses</a></li>
+            <li><a href="gallery.html"><i class="fas fa-file-image" style="color:  #a7b8cbd1;"></i> Gallery</a></li>
+            <li><a href="courses.html"><i class="fas fa-graduation-cap" style="color:  #a7b8cbd1;"></i> Courses</a></li>
             <li><a href="#contact"><i class="fas fa-envelope" style="color: #a7b8cbd1;"></i> Contact</a></li>
             <li><a href="#contact"><i class="fa-solid fa-location-dot" style="color: #a7b8cbd1;"></i> Location</a></li>
            
@@ -69,8 +69,8 @@
         <ul class="mobiles">
            
             
-            <a href="#proj"><i class="fas fa-file-image" style="color:  #a7b8cbd1;"></i> Gallery</a></li>
-            <a href="#faqs"><i class="fas fa-graduation-cap" style="color:  #a7b8cbd1;"></i> Courses</a></li>
+            <a href="gallery.html"><i class="fas fa-file-image" style="color:  #a7b8cbd1;"></i> Gallery</a></li>
+            <a href="courses.html"><i class="fas fa-graduation-cap" style="color:  #a7b8cbd1;"></i> Courses</a></li>
             <a href="#contact"><i class="fas fa-envelope" style="color: #a7b8cbd1;"></i> Contact</a></li>
             <a href="#contact"><i class="fa-solid fa-location-dot" style="color: #a7b8cbd1;"></i> Location</a></li>
     
@@ -95,7 +95,7 @@
       /* Medium screens (min-width: 768px) */
       @media (min-width: 768px) {
         .ad-card {
-          padding: 5vh;
+          padding: 6vh;
         }
       }
   
@@ -253,7 +253,7 @@
 <style>
   .face {
       margin: 0;
-      background-color: rgba(135, 151, 180, 0.653); ;
+    
       color: white;
       font-family: Arial, sans-serif;
       text-align: center;
@@ -547,64 +547,155 @@ function resumeSlideshow() {
 
   <style>
 
-  
-    .fronting{
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 20px;
-    }
-    .container {
-        
-        flex-direction: column;
-        gap: 20px;
-        max-width: 600px;
-       
-    }
+
+ 
+    
     .column {
         display: flex;
         align-items: flex-start;
         gap: 15px;
     }
-    .icon {
-      background-color:  #91b1d47d;;
-        width: 35px;
-        height: 35px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 2px solid  #1058a4e8;
-        border-radius: 50%;
-        font-size: 20px;
-        color:  #1058a4e8;
-    }
+
     .text {
         flex: 1;
         color:#2d67a5e8;
     }
-    @media (min-width: 768px) {
-        .container {
-            flex-direction: row;
-        }
-    }
+
 
 </style>
-<div class="fronting">
-<div class="container">
-    <div class="column">
-        <div class="icon"><i class="far fa-building"></i></div>
-        <div class="text" style="font-family:'Arial Narrow Bold'; font-size: 2.3vh;">
-          <p>We are a training institution whose main focus is to improve efficiency and effectiveness for all individuals and businesses. Our accredited programs offer professional certifications and licenses in forklift operation, reach trucks, cranes, and various other heavy machinery. With a commitment to quality training, we equip our learners with the skills and knowledge needed to operate safely and confidently in the workplace. Join us to advance your career with industry-recognized qualifications.
-         </p>
-
-         <div class="lining"></div>
-        
-        </div>
-    </div>
-
-</div>
-</div>
-
-</div>
+<style>
+  /* Flex container that wraps and centers items */
+  .containing{
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center; /* Center items in each row */
+       gap: 10px; /* Gap between boxes */
+     }
+ 
+     /* Each box: default for 3 columns */
+     .boxs {
+       background-color: #f0f0f0;
+       border: 1px solid #ccc;
+       padding: 20px;
+       text-align: center;
+       font-size: 1.2em;
+       /* 
+          Calculate width: For 3 boxes per row, subtract the total horizontal gap (2 * 10px)
+          from 100% then divide by 3. 
+       */
+       flex: 1 1 calc((100% - 20px) / 3);
+       max-width: calc((100% - 20px) / 3);
+     }
+ 
+     /* Tablet view: 2 columns */
+     @media (max-width: 768px) {
+       .boxs{
+         flex: 1 1 calc((100% - 10px) / 2);
+         max-width: calc((100% - 10px) / 2);
+       }
+     }
+ 
+     /* Mobile view: 1 column */
+     @media (max-width: 480px) {
+       .boxs{
+         flex: 1 1 100%;
+         max-width: 100%;
+       }
+     }
+ 
+ .container{
+   padding: 15px;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center; /* Center items in each row */
+     gap: 5px; /* Gap between boxes */
+   }
+ 
+   /* Each box: default for 3 columns */
+   .column {
+  
+    display: flex;
+        align-items: flex-start;
+        gap: 1px;
+  padding: 20px;
+       border: 1px solid #ccc;
+      
+       text-align: center;
+       font-size: 1.2em;
+       /* 
+          Calculate width: For 3 boxes per row, subtract the total horizontal gap (2 * 10px)
+          from 100% then divide by 3. 
+       */
+   
+       max-width: calc((100% - 20px) / 2);
+     }
+   
+ 
+   /* Tablet view: 2 columns */
+   @media (max-width: 768px) {
+     .column{
+       flex: 1 1 calc((100% - 50px) / 2);
+       max-width: calc((100% - 10px) / 2);
+     }
+   }
+ 
+   /* Mobile view: 1 column */
+   @media (max-width: 480px) {
+     .column{
+       flex: 1 1 100%;
+       max-width: 100%;
+     }
+   }
+ 
+   .text {
+        flex: 1;
+        color:#2d67a5e8;
+    }
+ </style>
+ 
+ 
+ 
+ 
+ 
+ <div class="fronting">
+ <div class="container">
+     <div class="column">
+ 
+       <style>
+          .icon {
+       background-color:  #91b1d47d;;
+         width: 35px;
+         height: 35px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         border: 2px solid  #1058a4e8;
+         border-radius: 50%;
+         font-size: 20px;
+         color:  #1058a4e8;
+     }
+       </style>
+         <div class="icon"><i class="far fa-building"></i></div>
+         <div class="text" style="font-family:'Arial Narrow Bold'; font-size: 2.1vh;">
+           <p>We are a training institution whose main focus is to improve efficiency and effectiveness for all individuals and businesses. Our accredited programs offer professional certifications and licenses in forklift operation, reach trucks, cranes, and various other heavy machinery. 
+          </p>
+ 
+          
+         
+         </div>
+     </div>
+ 
+ 
+     <div class="column">
+     <div class="icon"><i class="far fa-building"></i></div>
+     <div class="text" style="font-family:'Arial Narrow Bold'; font-size: 2.1vh;">
+       <p>With a commitment to quality training, we equip our learners with the skills and knowledge needed to operate safely and confidently in the workplace. Join us to advance your career with industry-recognized qualifications. </p>
+ 
+      
+     </div>
+     </div>
+ </div>
+ </div>
  
 <style>
 
@@ -622,7 +713,7 @@ function resumeSlideshow() {
     font-family: Verdana;
     color: #0b4a8df1; 
     padding:15px;
-   background-color:  rgba(131, 146, 172, 0.536); 
+
   }
 </style>
 
@@ -635,17 +726,23 @@ function resumeSlideshow() {
 
 
 <style>
-.inf{
- color: #e4eaf0e8;
- margin-top: 15px;
-}
+
+ 
+
+
+
+
   .design2 {
+    display: flex;
+       flex-wrap: wrap;
+       justify-content: center; /* Center items in each row */
+       gap: 10px; /* Gap between boxes */
       font-family: Arial, sans-serif;
-      background-color: rgba(145, 161, 191, 0.588); 
-  justify-content: center;
 
   
-   display: inline-flex;
+ 
+
+ 
   }
   .containerr{
       display: grid;
@@ -655,6 +752,11 @@ function resumeSlideshow() {
       max-width: 80%;
       width: 100%;
   }
+
+  .inf{
+ color: #e4eaf0e8;
+ margin-top: 15px;
+}
   .boxer {
     color: #0c4887e8;;
       background: #7392b3e8;
@@ -713,10 +815,81 @@ function resumeSlideshow() {
 
 
 
-<div class="carding">
+
+
+<style>
+  /* Basic reset */
+
+
+  
+  /* Flex container that wraps and centers items */
+  .containing{
+    background-color: #d6dde6f0;;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center items in each row */
+    gap: 5px; /* Gap between boxes */
+  }
+
+  /* Each box: default for 3 columns */
+  .boxs {
+  background-color: #d6dde6f0;;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    /* 
+       Calculate width: For 3 boxes per row, subtract the total horizontal gap (2 * 10px)
+       from 100% then divide by 3. 
+    */
+    flex: 1 1 calc((100% - 20px) / 3);
+    max-width: calc((100% - 20px) / 3);
+  }
+
+  /* Tablet view: 2 columns */
+  @media (max-width: 768px) {
+    .boxs{
+      flex: 1 1 calc((100% - 50px) / 2);
+      max-width: calc((100% - 10px) / 2);
+    }
+  }
+
+  /* Mobile view: 1 column */
+  @media (max-width: 480px) {
+    .boxs{
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="containing">
   
     <!-- Ad Card Section -->
-    <section class="ad-card">
+    <section class="boxs">
       <!-- Top Box -->
       <div class="top-box">
      
@@ -742,7 +915,7 @@ function resumeSlideshow() {
       </div>
     </section>
     <!-- End of Ad Card Section -->
-    <section class="ad-card">
+    <section class="boxs">
       <!-- Top Box -->
       <div class="top-box">
      
@@ -769,34 +942,34 @@ function resumeSlideshow() {
     </section>
 
       <!-- Ad Card Section -->
-      <section class="ad-card">
+      <section class="boxs">
         <!-- Top Box -->
         <div class="top-box">
        
-          <h2>Safety First</h2>
-  
+          <h2>Advanced Equipment</h2>
+      
         </div>
-    
+      
         <!-- Image (Overlaps the Top Box) -->
         <div class="image-container">
           <img
-            src="images/cert2.jpg"
+            src="images/bgdiv.jpg"
             alt="Tiger in the wild"
           >
         </div>
-
+      
         <!-- Bottom Box -->
         <div class="bottom-box">
           <h4>Our Mission</h4>
           <p>
-            At Cedar Business Consultancy, we emphasize safe operating habits for all trainees. Our programs include risk assessments and best practices.We prioritize creating a secure and responsible work environment.</p>
-          <button>Safety Focus</button>
-  
+            Our facilities are equipped with modern machinery and tools to provide trainees with hands-on experience using the latest industry-leading training resources.</p>
+          <button>Modern Labs</button>
+      
         </div>
       </section>
       <!-- End of Ad Card Section -->
 <br>
-<section class="ad-card">
+<section class="boxs">
         <!-- Top Box -->
         <div class="top-box">
        
@@ -808,8 +981,7 @@ function resumeSlideshow() {
         <div class="image-container">
           <img
             src="images/rev1.jpg"
-            alt="Tiger in the wild"
-          >
+            alt="Tiger in the wild">
         </div>
     
         <!-- Bottom Box -->
@@ -820,37 +992,35 @@ function resumeSlideshow() {
           <button>CV Upgrade</button>
   
         </div>
-</section>
+      </section>
 
-<section class="ad-card">
+
+
+<section class="boxs">
   <!-- Top Box -->
   <div class="top-box">
  
-    <h2>Advanced Training Equipment</h2>
+    <h2>Safety First</h2>
 
   </div>
 
   <!-- Image (Overlaps the Top Box) -->
   <div class="image-container">
     <img
-      src="images/bgdiv.jpg"
-      alt="Tiger in the wild"
-    >
+      src="images/cert2.jpg"
+      alt="Tiger in the wild">
   </div>
 
   <!-- Bottom Box -->
   <div class="bottom-box">
     <h4>Our Mission</h4>
     <p>
-      Our facilities are equipped with modern machinery and tools to provide trainees with hands-on experience using the latest industry-leading training resources.</p>
-    <button>Modern Labs</button>
-
-  </div>
-</section>
+      At Cedar Business Consultancy, we emphasize safe operating habits for all trainees. Our programs include risk assessments and best practices.We prioritize creating a secure and responsible work environment.</p>
+    <button>Safety Focus</button>
 
 
 </section>
-    </div>
+ 
 
 
 
@@ -860,13 +1030,27 @@ function resumeSlideshow() {
     <style>
 
 
-      .mainer {
-       
-      }
 
+  .mainer{
+    display: flex;
+    flex-wrap: wrap;
+    /* Center items in each row */
+    gap: 5px; /* Gap between boxes */
+
+  }
       .sec{
-       
-          padding: 17px;
+      
+    border: 1px solid #cccccc9d;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    /* 
+       Calculate width: For 3 boxes per row, subtract the total horizontal gap (2 * 10px)
+       from 100% then divide by 3. 
+    */
+    flex: 1 1 calc((100% - 20px) / 3);
+    max-width: calc((100% - 20px) / 3);
+          padding: 18px;
           margin: 10px auto;
           width: 95%;
           max-width: 600px;
@@ -875,9 +1059,10 @@ function resumeSlideshow() {
       }
 
       .divider {
+        margin: 5px;
           width: 10px;
           height: 70px;
-          background:#bdd4ed;  /* Dark Red */
+          background:#bdd4ed;  
           position: absolute;
           left: 0;
           top: 10px;
@@ -935,11 +1120,6 @@ function resumeSlideshow() {
 </style>
 <main class="mainer">
 
-
-  <i class="fa-solid fa-envelope"></i>
-  <i class="fa-solid fa-location-dot"></i>
-
-
   <div class="sec">
       <div class="divider"></div>
       <h4 class="timer">Flexible Training Hours</h4>
@@ -971,7 +1151,7 @@ function resumeSlideshow() {
 </div>
 
 
-<div class="courses" style="background-color: #5b81a752;"> <br/>
+<div class="courses"> <br/>
 
   <style>
     /* Ensure padding and borders are included in the element's width */
@@ -994,7 +1174,7 @@ function resumeSlideshow() {
 
     /* Card styling */
     .cardey {
-      background-color: #00499cb5;
+      background-color: #1259a9b2;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
       border-radius: 3px;
       padding: 20px;
@@ -1065,7 +1245,7 @@ function resumeSlideshow() {
     @media (max-width: 768px) {
       .sider-contact-location {
         flex-direction: column;
-        gap: 20px; /* Adjust the gap for small screens */
+        gap: 50px; /* Adjust the gap for small screens */
       }
 
       .cardey {
@@ -1180,8 +1360,128 @@ function resumeSlideshow() {
 
 </div>
 
+<style>
 
+.gqeberha-forklift-cedar{
 
+    padding:22px;
+    font-size: 1.3vh;
+color: #1b3c5ed0;
+
+  }
+
+.bgg{
+  
+  background-color: #9aafc498;
+  
+}
+  .contai { 
+  background-color:#9aafc498;
+      max-width: 100%; 
+      overflow-x:scroll;
+      display: flex; 
+      gap: 15px; 
+      padding: 20px; 
+      height: 100%;
+
+      
+  }
+  .cardt { 
+      background-color: #9aafc486;
+      min-width: 240px; 
+      background: linear-gradient(135deg, #405783, #45649ae3); 
+      padding: 20px; 
+      border-radius: 3px; 
+      scroll-snap-align: center; 
+      display: flex; 
+      flex-direction: column; 
+      align-items: center;
+      
+  }
+  .cardt h3 {
+      font-size: 18px; 
+      color: #7a97cc ;
+      margin-bottom: 10px; 
+      text-align: center;
+  }
+  .cardt img {
+    
+      width: 100%; 
+      height: auto; 
+      max-height: 150px; 
+      border-radius: 3px;
+      object-fit: cover;
+
+  }
+  .dotss { 
+      
+      display: flex; 
+      justify-content: center; 
+      margin-top: 10px; 
+  }
+  .dott { 
+    background-color: #00499c;
+      width: 10px; 
+      height: 10px; 
+      margin: 5px; 
+      background: rgb(213, 228, 246); 
+      border-radius: 50%; 
+      transition: background 0.3s; 
+  }
+  .dott.active { 
+    color: #1b3a59e8;
+      background:  #9aafc498;
+  }
+</style>
+
+<div class="bgg">
+
+  <div class="gqeberha-forklift-cedar">
+
+ <h1>We are a training center in South Africa that is fully accredited with the following SETAS</h1>
+  </div>
+
+<div class="contai" id="scrollContainer" onscroll="updateDots()">
+  <div class="cardt">
+      <h3>Mining Qualifications Authority</h3>
+      <img src="images/mqa.webp" alt="Cyber Tech">
+  </div>
+  <div class="cardt">
+      <h3>Transport Education Training Authority</h3>
+      <img src="images/teta.webp" alt="AI Evolution">
+  </div>
+  <div class="cardt">
+      <h3>Umalusi</h3>
+      <img src="images/umalusi.webp" alt="Quantum Leap">
+  </div>
+  <div class="cardt">
+      <h3>Construction Education & Training Authority</h3>
+      <img src="images/ceta.webp" alt="Neon Future">
+  </div>
+</div>
+</div>
+
+<div class="dotss">
+  <span class="dott active"></span>
+  <span class="dott"></span>
+  <span class="dott"></span>
+  <span class="dott"></span>
+</div>
+<script>
+  function updateDots() {
+      const container = document.getElementById("scrollContainer");
+      const dots = document.querySelectorAll(".dott");
+      let index = Math.round(container.scrollLeft / container.children[0].offsetWidth);
+      dots.forEach((dot, i) => dot.classList.toggle("active", i === index));
+  }
+</script>
+
+<div class="gqeberha-forklift-cedar">
+
+  
+   </div>
+
+</div>
 <style>
   footer {
     font-family: Arial, sans-serif;
@@ -1499,7 +1799,6 @@ function resumeSlideshow() {
 
 
 </div>
-
 
 
 
