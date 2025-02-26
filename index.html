@@ -252,7 +252,7 @@
 
 <style>
   .face {
-      margin: 0;
+      margin: 10;
     
       color: white;
       font-family: Arial, sans-serif;
@@ -617,11 +617,11 @@ function resumeSlideshow() {
     display: flex;
         align-items: flex-start;
         gap: 1px;
-  padding: 20px;
+  padding: 18px;
        border: 1px solid #ccc;
       
        text-align: center;
-       font-size: 1.2em;
+       font-size: 1.4em;
        /* 
           Calculate width: For 3 boxes per row, subtract the total horizontal gap (2 * 10px)
           from 100% then divide by 3. 
@@ -687,7 +687,7 @@ function resumeSlideshow() {
  
  
      <div class="column">
-     <div class="icon"><i class="far fa-building"></i></div>
+     <div class="icon"><i class="fas fa-thumbtack"></i></div>
      <div class="text" style="font-family:'Arial Narrow Bold'; font-size: 2.1vh;">
        <p>With a commitment to quality training, we equip our learners with the skills and knowledge needed to operate safely and confidently in the workplace. Join us to advance your career with industry-recognized qualifications. </p>
  
@@ -1300,13 +1300,13 @@ function resumeSlideshow() {
     margin-top: -3ch;
     padding-left: 17px;
     color:#d8dde2; 
-    font-size: 20px;
+    font-size: 16px;
   }
   .tim{
     margin-top: -4ch;
     padding-left: 17px;
     color:#d8dde2; 
-    font-size: 20px;
+    font-size: 16px;
   }
   .divide {
           width: 7px;
@@ -1366,18 +1366,18 @@ function resumeSlideshow() {
 .gqeberha-forklift-cedar{
 
     padding:22px;
-    font-size: 1.3vh;
-color: #1b3c5ed0;
+    font-size: 1.1vh;
+color: rgba(31, 90, 150, 0.96);
 
   }
 
 .bgg{
   
-  background-color: #9aafc498;
+  
   
 }
   .contai { 
-  background-color:#9aafc498;
+  background-color:#9aafc476;
       max-width: 100%; 
       overflow-x:scroll;
       display: flex; 
@@ -1390,7 +1390,7 @@ color: #1b3c5ed0;
   .cardt { 
       background-color: #9aafc486;
       min-width: 240px; 
-      background: linear-gradient(135deg, #405783, #45649ae3); 
+      background: linear-gradient(135deg, #d6dde6f0, #ccd4dff0); 
       padding: 20px; 
       border-radius: 3px; 
       scroll-snap-align: center; 
@@ -1401,7 +1401,8 @@ color: #1b3c5ed0;
   }
   .cardt h3 {
       font-size: 18px; 
-      color: #7a97cc ;
+      color:  rgba(31, 90, 150, 0.96);
+
       margin-bottom: 10px; 
       text-align: center;
   }
@@ -1439,7 +1440,12 @@ color: #1b3c5ed0;
 
   <div class="gqeberha-forklift-cedar">
 
- <h1>We are a training center in South Africa that is fully accredited with the following SETAS</h1>
+
+
+ <h1>We are a training center in South Africa that is fully accredited with the following SETAS <i class="fas fa-hand-point-down"></i></h1>
+
+
+
   </div>
 
 <div class="contai" id="scrollContainer" onscroll="updateDots()">
@@ -1548,7 +1554,7 @@ color: #1b3c5ed0;
 
 
 
-
+<p id="location"></p>
 
 
 
@@ -1559,15 +1565,15 @@ color: #1b3c5ed0;
         <div class="footer-section">
             <h4 class="lined">Links</h4>
             <ul>
-                <li><a href="#">Courses</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+               
             </ul>
         </div>
         <div class="footer-section">
             <h4 class="lined">Contact</h4>
             <ul>
-                <li>Email</li>
+                
                 <li>Call</li>
                 <li>Whatsapp</li>
             </ul>
@@ -1580,6 +1586,7 @@ color: #1b3c5ed0;
               <li><a href="#">Cashier</a></li>
               <li><a href="#">Crane</a></li>
               <li><a href="#">Reach Truck</a></li>
+              <li><a href="courses.html" style="color: #d0dfed;font-size: 17px;">view All....</a></li>
             </ul>
         </div>
     </div>
@@ -1628,7 +1635,7 @@ color: #1b3c5ed0;
         position: absolute;
         top: 100%;
         left: 20px;
-        border-width: 20px;
+        border-width: 17px;
         border-style: solid;
         border-color: #6291c6 transparent transparent transparent;
     }
