@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+   
  
 }
 
@@ -48,10 +48,6 @@
     background: rgba(146, 160, 187, 0.637); 
     z-index: 1; 
 }
-
-
-
-
 
 
 
