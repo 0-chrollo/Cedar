@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+ 
 }
 
 
@@ -17,29 +18,8 @@
 }
 
 
-.button-container {
-    display: flex;
-    justify-content: center; 
-    gap: 45%; 
-    position: absolute; 
-    bottom: 10px; 
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2; /* Ensure buttons are above the overlay */
-}
 
-/* Style for individual buttons */
-.button {
-    display: inline-block;
-    padding: 12px 35px; /* Adjust padding as needed */
-    background-color: gray;
-    color: white;
-    text-decoration: none;
-    border: 1px solid white; /* Border color */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 14px; /* Font size */
-    text-align: center; /* Center text inside button */
-}
+
 
 .button:hover {
     background-color: darkgray; /* Darken button on hover */

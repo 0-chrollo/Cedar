@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <title>Cedar Business Consultancy </title>
+    <title>Cedar Business Consultancy | Courses </title>
     <link rel="stylesheet" href="static/styles.css">
     <script defer src="scripts/scripts.js"></script> 
 
@@ -52,10 +52,10 @@
     <nav class="navbar">
         <img src="images/logo.png" alt="Cedar" style="width: fit-content;filter: none;">
         <ul>
-            
+          <li><a href="index.html"><i class="fa fa-home" style="color: #a7b8cbd1;"></i> Home</a></li>
             <li><a href="projects.html"><i class="fas fa-file-image" style="color:  #a7b8cbd1;"></i> Gallery</a></li>
             
-            <li><a href="index.html"><i class="fa fa-home" style="color: #a7b8cbd1;"></i> Home</a></li>
+         
             <li><a href="#contact"><i class="fa-solid fa-location-dot" style="color: #a7b8cbd1;"></i> Location</a></li>
            
         </ul>
@@ -68,10 +68,10 @@
     <div class="menu" id="menu">
         <ul class="mobiles">
            
+          <a href="index.html"><i class="fa fa-home" style="color: #a7b8cbd1;"></i> Home</a></li>
+            <a href="gallery.html"><i class="fas fa-file-image" style="color:  #a7b8cbd1;"></i> Gallery</a></li>
             
-            <a href="#proj"><i class="fas fa-file-image" style="color:  #a7b8cbd1;"></i> Gallery</a></li>
-            
-            <a href="index.html"><i class="fa fa-home" style="color: #a7b8cbd1;"></i> Home</a></li>
+           
             <a href="#contact"><i class="fa-solid fa-location-dot" style="color: #a7b8cbd1;"></i> Location</a></li>
     
             
@@ -348,42 +348,465 @@
 
 
 </div>
-<script>
-let slideIndex = 0;
-let slideInterval;
-showSlides();
+<div class="star">
 
-function showSlides() {
-  let slides = document.querySelectorAll(".slide");
-  let dots = document.querySelectorAll(".dot");
-  for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex - 1].style.display = "block";
-  dots.forEach(dot => dot.classList.remove("active"));
-  dots[slideIndex - 1].classList.add("active");
-  slideInterval = setTimeout(showSlides, 3000);
-}
+  <style>
+   
 
-function currentSlide(n) {
-  clearTimeout(slideInterval);
-  slideIndex = n - 1;
-  showSlides();
-}
+    .star {
+      margin-top: 35ch;
+        background-color: #f5f5f5;
+        padding: 20px;
+    }
 
-function pauseSlideshow() {
-  clearTimeout(slideInterval);
-}
+    .product-container {
+        display: grid;
+        gap: 20px;
+        justify-content: center;
+    }
 
-function resumeSlideshow() {
-  slideInterval = setTimeout(showSlides, 3000);
-}
-</script>
+    /* 2x2 layout for small screens */
+    @media (max-width: 768px) {
+        .product-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    /* 3x3 layout for larger screens */
+    @media (min-width: 769px) {
+        .product-container {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    .product-card {
+        width: 100%;
+        background: white;
+        border-radius: 3px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+    .product-card img {
+        width: 100%;
+        height: 220px; /* Adjust height as needed */
+        object-fit: cover;
+        display: block;
+    }
+
+    .buy-button {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        margin-top: 10px;
+        background-color: #00499c;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        font-size: 16px;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .buy-button:hover {
+        background-color: #8ab5e2;
+    }
+
+    .button-container {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+    }
+</style>
 
 
+<div class="product-container">
+    <div>
+        <div class="product-card">
+            <img src="images/q1.jpg" alt="Product 1">
+        </div>
+        <div class="button-container">
+            <button class="buy-button">Book</button>
+        </div>
+    </div>
+
+    <div>
+        <div class="product-card">
+            <img src="images/q2.webp" alt="Product 2">
+        </div>
+        <div class="button-container">
+            <button class="buy-button">Book</button>
+        </div>
+    </div>
+
+    <div>
+        <div class="product-card">
+            <img src="images/q3.webp" alt="Product 3">
+        </div>
+        <div class="button-container">
+            <button class="buy-button">Book</button>
+        </div>
+    </div>
+
+    <div>
+        <div class="product-card">
+            <img src="images/q4.webp" alt="Product 4">
+        </div>
+        <div class="button-container">
+            <button class="buy-button">Book</button>
+        </div>
+    </div>
+    <div>
+      <div class="product-card">
+          <img src="images/q6.webp" alt="Product 3">
+      </div>
+      <div class="button-container">
+          <button class="buy-button">Book</button>
+      </div>
+  </div>
+
+  <div>
+      <div class="product-card">
+          <img src="images/q7.webp" alt="Product 4">
+      </div>
+      <div class="button-container">
+          <button class="buy-button">Book</button>
+      </div>
+  </div>
+
+  <div>
+    <div class="product-card">
+        <img src="images/q5.jpg" alt="Product 3">
+    </div>
+    <div class="button-container">
+        <button class="buy-button">Book</button>
+    </div>
+</div>
+
+<div>
+    <div class="product-card">
+        <img src="images/cert2.jpg" alt="Product 4">
+    </div>
+    
+    <div class="button-container">
+        <button class="buy-button">Book</button>
+    </div>
+</div>
+
+</div>
+
+
+</div>
 </main>
 
 
-<main class="about-us">
+</div>
+
+
+
+
+
+<div class="courses"> <br/>
+
+  <style>
+    /* Ensure padding and borders are included in the element's width */
+    .sider-contact-location, .card, .contact-form input, .contact-form textarea, .contact-form button {
+      box-sizing: border-box;
+    }
+
+    /* Container inside .sider-contact-location */
+    .sider-contact-location {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+      width: 100%; /* Ensure full width */
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10px;
+      overflow: hidden; /* Prevent any content from overflowing */
+    }
+
+    /* Card styling */
+    .cardey {
+      background-color: #1259a9b2;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 3px;
+      padding: 20px;
+      flex: 1;
+      min-width: 300px; /* Set minimum width for smaller screens */
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    /* Responsive Map iframe */
+    .map {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 3px;
+    }
+
+    /* Contact form styling */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* General input field styling */
+    .contact-form input, .contact-form textarea {
+      padding: 10px;
+      border: 2px solid #ddd;
+      background-color: #ccdae9d2;;
+      border-radius: 3px;
+      font-size: 14px;
+      outline: none;
+      transition: border 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Floating label effect */
+    .contact-form input:focus, .contact-form textarea:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+    }
+
+    /* Placeholder styling */
+    .contact-form input::placeholder, .contact-form textarea::placeholder {
+      color: #003677e0;
+      
+    }
+
+    /* Button styling */
+    .contact-form button {
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #618dbc;
+      transform: translateY(-2px);
+    }
+
+    /* Media Queries for responsiveness */
+    @media (max-width: 768px) {
+      .sider-contact-location {
+        flex-direction: column;
+        gap: 50px; /* Adjust the gap for small screens */
+      }
+
+      .cardey {
+        width: 100%;
+        margin-bottom: 15px;
+        flex: none; /* Prevent columns from growing too much */
+      }
+
+      .map {
+        height: 250px;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .sider-contact-location {
+        flex-direction: row;
+      }
+
+      .cardey:first-child {
+        flex: 2;
+      }
+
+      .cardey:last-child {
+        flex: 1;
+      }
+    }
+  </style>
+
+  <div class="sider-contact-location">
+    <!-- Map Card -->
+    <div class="cardey">
+      <h3 style="font-size: 20px; font-weight: 600; color: #d0d0d0;"> <i class="fa-solid fa-location-dot"></i> Location</h3></br>
+
+
+
+      <div class="dividers"></div><p class="tim"> 623 Govan Mbeki St, North End, Gqeberha, 6001 (opposite Newlaw Court)</p>
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+
+  .tim{
+    margin-top: -4ch;
+    padding-left: 17px;
+    color:#d8dde2; 
+    font-size: 16px;
+  }
+  .divide {
+          width: 7px;
+          height: 55px;
+          background:#b5c2d3;  /* Dark Red */
+          position:sticky;
+         top:-17ch;
+          
+      }
+
+.dividers {
+          width: 7px;
+          height: 30px;
+          background:#b5c2d3;  /* Dark Red */
+          position:sticky;
+         
+          
+          
+          
+         
+          
+          
+      }
+</style>
+</br>
+
+
+
+
+
+
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.9060247826683!2d25.603550375711976!3d-33.94354507319818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e7ad3210351232b%3A0xe968e81525711d06!2sCedar%20business%20consultancy%20and%20corporate%20training!5e0!3m2!1sen!2sza!4v1740256479570!5m2!1sen!2sza" height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ 
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+  footer {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #00499c;
+    color: #fff;
+    padding: 10px 0;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+
+  .footer-section {
+    flex: 1;
+    margin: 0 10px;
+    padding: 5px;
+  }
+  
+  .lined {
+    font-size: 19px;
+    margin-bottom: 15px;
+    position: relative;
+  }
+  
+  .lined::after {
+    content: "";
+    display: block;
+    height: 4px;
+    background-color: #92b8ea;
+    width: 6ch;
+    margin-top: 8px;
+  }
+  
+  .footer-section ul {
+    font-size:13px;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section a:hover {
+    color: #00bcd4;
+  }
+  </style>
+
+
+
+
+
+
+
+<p id="location"></p>
+
+
+
+
+  
+  <footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4 class="lined">Links</h4>
+            <ul>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+               
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4 class="lined">Contact</h4>
+            <ul>
+                
+                <li>Call</li>
+                <li>Whatsapp</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4 class="lined">Courses</h4>
+            <ul>
+              <li><a href="#">Forklift</a></li>
+              <li><a href="#">Petrol Attendance</a></li>
+              <li><a href="#">Cashier</a></li>
+              <li><a href="#">Crane</a></li>
+              <li><a href="#">Reach Truck</a></li>
+              <li><a href="courses.html" style="color: #d0dfed;font-size: 17px;">view All....</a></li>
+            </ul>
+        </div>
+    </div>
+    <p align="center" style="font-size:10px; padding: 10px;"> &copy; 2025 Cedar Business Consultancy & Corporate Training. All Rights Reserved.
+       Powered by <a href="#" style="color: #d0cdcd; font-size: 11px;">Lucas</a></p>
+  </footer>
+

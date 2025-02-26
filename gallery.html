@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <title>Cedar Business Consultancy </title>
+    <title>Cedar Business Consultancy | Gallery</title>
     <link rel="stylesheet" href="static/styles.css">
     <script defer src="scripts/scripts.js"></script> 
 
@@ -25,7 +25,7 @@
 
 
 
-<body style="background-color: white;">
+<body style="background-color: #d6dde6f0;">
 
 <div class="contacting">
 
@@ -53,8 +53,8 @@
         <img src="images/logo.png" alt="Cedar" style="width: fit-content;filter: none;">
         <ul>
             
-          <li><a href="index.html"><i class="fa fa-home" style="color: #a7b8cbd1;"></i> Home</a></li>
-            <li><a href="#faqs"><i class="fas fa-graduation-cap" style="color:  #a7b8cbd1;"></i> Courses</a></li>
+               <li><a href="index.html"><i class="fa fa-home" style="color: #a7b8cbd1;"></i> Home</a></li>
+            <li><a href="courses.html"><i class="fas fa-graduation-cap" style="color:  #a7b8cbd1;"></i> Courses</a></li>
            
             <li><a href="#contact"><i class="fa-solid fa-location-dot" style="color: #a7b8cbd1;"></i> Location</a></li>
            
@@ -68,9 +68,9 @@
     <div class="menu" id="menu">
         <ul class="mobiles">
            
+          <a href="index.html"><i class="fa fa-home" style="color: #a7b8cbd1;"></i> Home</a></li>
+            <a href="courses.html"><i class="fas fa-graduation-cap" style="color:  #a7b8cbd1;"></i> Courses</a></li>
             
-           <a href="index.html"><i class="fa fa-home" style="color: #a7b8cbd1;"></i> Home</a></li>
-            <a href="#faqs"><i class="fas fa-graduation-cap" style="color:  #a7b8cbd1;"></i> Courses</a></li>
             <a href="#contact"><i class="fa-solid fa-location-dot" style="color: #a7b8cbd1;"></i> Location</a></li>
     
             
@@ -94,7 +94,7 @@
       /* Medium screens (min-width: 768px) */
       @media (min-width: 768px) {
         .ad-card {
-          padding: 5vh;
+          padding: 6vh;
         }
       }
   
@@ -251,8 +251,8 @@
 
 <style>
   .face {
-      margin: 0;
-      background-color: rgba(135, 151, 180, 0.653); ;
+      margin: 10;
+    
       color: white;
       font-family: Arial, sans-serif;
       text-align: center;
@@ -260,7 +260,7 @@
   .box {
       position: relative;
       width: 100%;
-      height: 45vh;
+      height: 63vh;
       background: #00499c;
       clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 100%);
       display: flex;
@@ -273,7 +273,7 @@
       font-family:'Segoe UI';
       color: rgb(228, 228, 228);
 
-      padding-bottom:10vh;
+      padding-bottom:35vh;
     
   
       font-size: 1.3rem;
@@ -331,58 +331,14 @@
 </div>
 
 
-<div class="content">   
-
-
-
-<style>
-  .py{
-    font-size: 18px;
-    font-family: 'Courier New';
-    color: #d7dfeeb0;
-  }
-</style>
-
-
-
-
-</div>
-<script>
-let slideIndex = 0;
-let slideInterval;
-showSlides();
-
-function showSlides() {
-  let slides = document.querySelectorAll(".slide");
-  let dots = document.querySelectorAll(".dot");
-  for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex - 1].style.display = "block";
-  dots.forEach(dot => dot.classList.remove("active"));
-  dots[slideIndex - 1].classList.add("active");
-  slideInterval = setTimeout(showSlides, 3000);
-}
-
-function currentSlide(n) {
-  clearTimeout(slideInterval);
-  slideIndex = n - 1;
-  showSlides();
-}
-
-function pauseSlideshow() {
-  clearTimeout(slideInterval);
-}
-
-function resumeSlideshow() {
-  slideInterval = setTimeout(showSlides, 3000);
-}
-</script>
-
-
-</main>
 
 
 <main class="about-us">
+
+
+
+
+
+
+</body>
+</html>
